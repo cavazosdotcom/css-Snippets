@@ -1,26 +1,134 @@
 * {
     box-sizing: border-box;
+    padding: 2%;
+    align-content: center;
+    background-color: var(--background-color);
+    hyphens: manual;
+    word-break: break-all;
   }
 
-main {
+:root {
+    --main-color: rgb(200, 94, 241);
+    --card-font: white;
+    --background-color: rgb(27, 27, 27);
+}
+
+.header {
+    display: block;
+    min-height: fit-content;
+    place-items: center;
+    text-align: center;
+  }
+  
+  .header h1 {
+      font-size: larger;
+      font-weight: 800;
+      color: var(--main-color);
+      font-size: 200%;
+  }
+
+  .header p {
+      color: var(--card-font);
+      font-size: 150%;
+  }
+
+.main {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     margin-top: 2%;
+    justify-content: space-between;
 }
 
 .card {
     display: inline-flex;
-    flex: 1 0 200px;
+    flex-direction: column;
+    flex: none;
+    min-height: fit-content;
+    max-width: 33.33%;
     padding: 10px;
-    margin-top: 2%;
-    text-align: center;
+    margin: 10px;
+    text-align: left;
     border-style: dashed;
     border-width: 1px;
+    border-color: var(--card-font);
   }
 
+.card_header {
+    display: inline-flex;
+    position: relative;
+    flex-direction: column;
+    margin-top: -20px;
+    padding: 1%;
+    text-align: left;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--card-font);
+    color: var(--main-color);
+    border-radius: 5px;
+  }
+
+pre {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    overflow-wrap: break-word;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--card-font);
+    justify-content: center;
+    border-radius: 8px;
+    background-image: linear-gradient(
+        rgba(232, 102, 236, 0.3) 0%,
+        rgba(232, 102, 236, 0.6)
+        100%
+    );
+}
+
+.card_subtext {
+    text-align: left;
+    color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    font-size: 100%;
+    overflow-wrap: break-word;
+}
+
+.card .card_header {
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.card:hover,
+.card:hover .card_header {
+    box-shadow: inset 0px 0px 8px
+rgba(232, 102, 236, 1), 0 0 15px
+rgba(232, 102, 236, 1);
+}
+
+footer {
+    color: var(--main-color);
+    align-content: center;
+    text-align: center;
+    font-size: 125%;
+}
+
 @media screen and (max-width: 768px) {
-    main,
-    nav {
+    main {
       flex-direction: column;
     }
-  }
+    .card {
+        min-width: 100%;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    main {
+      flex-direction: column;
+    }
+    .card {
+        min-width: 29%;
+        min-height: 400px;
+    }
+    pre {
+        min-height: 300px;
+    }
+}

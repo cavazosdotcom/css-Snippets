@@ -9,40 +9,94 @@
   <link rel="stylesheet" type="text/css" href="./assets/style.css" />
 </head>
 
-<header>
+<header class="header">
   <h1>CSS Snippet Cheatsheet</h1>
-  <p>Ever have trouble recalling the exact syntax for your favorite CSS code? Give it a permanent home and add it to this page! Select any snippet below and it'll automatically select all of the code for you to copy.</p>
+  <p class="header_p">Ever have trouble recalling the exact syntax for your favorite CSS code? Give it a permanent home and add it to this page! Select any snippet below and it'll automatically select all of the code for you to copy.</p>
 </header>
 
 <body>
   <main>
     <div class="snippets">
+    
     <section class="card">
-      <img src="./assets/images/camera.jpg" alt="camera" />
+      <h2 class="card_header">Flexbox Row</h2>
+        <p class="card_subtext">Use these three properties to create a Flexbox row layout.</p>
+          <pre>
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+          </pre> 
     </section>
+
     <section class="card">
-      <img src="./assets/images/tablet.jpg" alt="tablet" />
+      <h2 class="card_header">Flexbox Column</h2>
+        <p class="card_subtext">Use this to create a Flexbox column layout.</p>
+          <pre>
+.column {
+  display: flex;
+  flex-direction: column;
+}
+          </pre> 
     </section>
+
     <section class="card">
-      <img src="./assets/images/toilet-paper.jpg" alt="toilet paper" />
+      <h2 class="card_header">CSS Grid Layout</h2>
+        <p class="card_subtext">Build a 12-column layout using CSS Grid.</p>  
+          <pre>
+.grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns:
+repeat(12, 1fr);
+}
+          </pre> 
     </section>
+
     <section class="card">
-      <img src="./assets/images/wooden-spoons.jpg" alt="wooden spoons" />
+      <h2 class="card_header">Linear Gradients</h2>
+        <p class="card_subtext">This will create a background linear gradient from top to bottom.</p>
+          <pre>
+.linear-gradient-background {
+  background-image: linear-gradient(
+    rgba(232, 102, 236, 0.3) 0%,
+    rgba(232, 102, 236, 0.6) 100%
+  ):
+}
+          </pre> 
     </section>
+
     <section class="card">
-      <img src="./assets/images/toilet-paper.jpg" alt="toilet paper" />
+      <h2 class="card_header">Box Transition Glow</h2>
+        <p class="card_subtext">Use transition and box shadows to glow on hover.</p>
+          <pre>
+.code-card .card-header {
+  border-radius: 8x;
+  transition: all 0.5s ease-in-out;
+}
+          </pre> 
     </section>
+
     <section class="card">
-      <img src="./assets/images/wooden-spoons.jpg" alt="wooden spoons" />
+      <h2 class="card_header">Overlay Card with Title</h2>
+        <p class="card_subtext">Use position properties and negative margins to raise elements higher than their natural starting point.</p>
+          <pre>
+.card header {
+  position: relative;
+  margin-top: -20px;
+}
+          </pre>   
     </section>
+
     </div>
   </main>
 
 
     <footer>
-      <h3>
-        <span>Made with blood, sweat, and tears.</span>
-      </h3>
+      <h2 class="page_footer">
+      Made with 💔 blood, sweat, and tears.
+      </h2>
     </footer>
 
 </body>
