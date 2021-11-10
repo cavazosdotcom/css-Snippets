@@ -39,12 +39,23 @@
     justify-content: space-between;
 }
 
+.snippets {
+    width: 100%;
+    display: inline-block;
+}
+
+.row {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .card {
+    width: 400px;
     display: inline-flex;
     flex-direction: column;
     flex: none;
     min-height: fit-content;
-    max-width: 33.33%;
     padding: 10px;
     margin: 10px;
     text-align: left;
